@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfgf57q6kbne3"]
+
+[ext_resource type="Script" uid="uid://crc5utk6ppw7j" path="res://scripts/Game.cs" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dbwkw0mkq3344" path="res://scenes/player.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://ckpc0i4sv0w4p" path="res://scenes/world.tscn" id="3_iywne"]
+[ext_resource type="Script" uid="uid://rxav6evl6d0b" path="res://scripts/LeafSpawner.cs" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://pyrfmvi57dne" path="res://scenes/leaf.tscn" id="5_iywne"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_lnu2h")
+
+[node name="World" parent="." instance=ExtResource("3_iywne")]
+
+[node name="LeafSpawner" type="Node" parent="."]
+script = ExtResource("4_lbhrr")
+NodeScene = ExtResource("5_iywne")
+
+[node name="Player" parent="." instance=ExtResource("2_lbhrr")]
+z_index = 5
+position = Vector2(170, 540.17)
+scale = Vector2(0.595, 0.595)
+LiftOffSpeed = null
+
+[node name="Leaf" parent="." instance=ExtResource("5_iywne")]
+position = Vector2(269, 189)

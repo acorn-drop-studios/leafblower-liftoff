@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://pyrfmvi57dne"]
+
+[ext_resource type="Script" uid="uid://dnhtmgxap6tnh" path="res://scripts/entities/Leaf.cs" id="1_4r3pj"]
+[ext_resource type="Texture2D" path="res://assets/art/backgrounds/PNG/Default/bush3.png" id="1_wmchb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4r3pj"]
+radius = 24.0
+height = 48.0
+
+[node name="Leaf" type="Node2D"]
+script = ExtResource("1_4r3pj")
+metadata/_custom_type_script = "uid://bo5gvn5058lp4"
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(0, -26)
+texture = ExtResource("1_wmchb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -23)
+shape = SubResource("CapsuleShape2D_4r3pj")
