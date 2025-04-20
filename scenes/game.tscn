@@ -17,9 +17,8 @@ NodeScene = ExtResource("5_iywne")
 
 [node name="Player" parent="." instance=ExtResource("2_lbhrr")]
 z_index = 5
-position = Vector2(170, 540.17)
+position = Vector2(116, 579)
 scale = Vector2(0.595, 0.595)
-LiftOffSpeed = null
 
 [node name="Leaf" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(269, 189)

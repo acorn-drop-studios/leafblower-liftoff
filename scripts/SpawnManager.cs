@@ -17,6 +17,11 @@ public partial class SpawnManager:Node
         new Vector2(2000, 581)
     ];
     
+    public override void _Ready()
+    {
+        Instance = this;
+    }
+    
     public Vector2 GetSpawnLocation()
     {
         if (_spawnLocations.Count == 0)

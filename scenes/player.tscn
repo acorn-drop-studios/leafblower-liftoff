@@ -1,86 +1,67 @@
-[gd_scene load_steps=30 format=3 uid="uid://dbwkw0mkq3344"]
+[gd_scene load_steps=39 format=3 uid="uid://dbwkw0mkq3344"]
 
-[ext_resource type="Texture2D" path="res://assets/art/player_fall.png" id="1_sweqy"]
-[ext_resource type="Texture2D" path="res://assets/art/player_idle.png" id="2_2hs0m"]
-[ext_resource type="Texture2D" path="res://assets/art/player_jump.png" id="3_1jxqw"]
-[ext_resource type="Texture2D" path="res://assets/art/player_run.png" id="4_dw050"]
-[ext_resource type="Script" path="res://scripts/entities/Player.cs" id="5_b26j0"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
-radius = 28.0
-height = 119.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
-atlas = ExtResource("1_sweqy")
-region = Rect2(0, 0, 113, 121)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
-atlas = ExtResource("1_sweqy")
-region = Rect2(113, 0, 113, 121)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ivps1"]
-atlas = ExtResource("1_sweqy")
-region = Rect2(226, 0, 113, 121)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q13i1"]
-atlas = ExtResource("3_1jxqw")
-region = Rect2(108, 0, 108, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
-atlas = ExtResource("2_2hs0m")
-region = Rect2(21, 0, 90, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
-atlas = ExtResource("2_2hs0m")
-region = Rect2(111, 0, 90, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
-atlas = ExtResource("2_2hs0m")
-region = Rect2(201, 0, 90, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
-atlas = ExtResource("2_2hs0m")
-region = Rect2(291, 0, 90, 120)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_op7ga"]
-atlas = ExtResource("3_1jxqw")
-region = Rect2(0, 0, 108, 140)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbfsw"]
-atlas = ExtResource("4_dw050")
-region = Rect2(0, 6, 131, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tmop"]
-atlas = ExtResource("4_dw050")
-region = Rect2(131, 6, 131, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ahtn"]
-atlas = ExtResource("4_dw050")
-region = Rect2(262, 6, 131, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7lmhl"]
-atlas = ExtResource("4_dw050")
-region = Rect2(0, 141, 131, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dx0e4"]
-atlas = ExtResource("4_dw050")
-region = Rect2(131, 141, 131, 135)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jm5j8"]
-atlas = ExtResource("4_dw050")
-region = Rect2(262, 141, 131, 135)
+[ext_resource type="Texture2D" uid="uid://bm8s8oonjhr7h" path="res://assets/art/character/fighter_death_0052.png" id="2_wnwbv"]
+[ext_resource type="Texture2D" uid="uid://nn0hr5dudoyl" path="res://assets/art/character/fighter_death_0053.png" id="3_gl8cc"]
+[ext_resource type="Texture2D" uid="uid://bo8gitl5no4rl" path="res://assets/art/character/fighter_death_0054.png" id="4_487ah"]
+[ext_resource type="Script" uid="uid://bq0adfvng8dwb" path="res://scripts/entities/Player.cs" id="5_b26j0"]
+[ext_resource type="Texture2D" uid="uid://b324ot4ksymjj" path="res://assets/art/character/fighter_death_0055.png" id="5_md1ol"]
+[ext_resource type="Texture2D" uid="uid://cgvyjj1jafwm5" path="res://assets/art/character/fighter_death_0056.png" id="6_bj30b"]
+[ext_resource type="Texture2D" uid="uid://csm284nqywecm" path="res://assets/art/character/fighter_death_0057.png" id="7_jc3p3"]
+[ext_resource type="Texture2D" uid="uid://dmlvfedp8cxwc" path="res://assets/art/character/fighter_death_0058.png" id="8_hax0n"]
+[ext_resource type="Texture2D" uid="uid://bfpg8gpbj0mta" path="res://assets/art/character/fighter_death_0059.png" id="9_t4otl"]
+[ext_resource type="Texture2D" uid="uid://cny6jhm4v6vse" path="res://assets/art/character/fighter_death_0060.png" id="10_j2b1d"]
+[ext_resource type="Texture2D" uid="uid://cneey63ktjhoq" path="res://assets/art/character/fighter_death_0061.png" id="11_cs1tg"]
+[ext_resource type="Texture2D" uid="uid://dxmju1augte2v" path="res://assets/art/character/fighter_jump_0046.png" id="12_2dvfe"]
+[ext_resource type="Texture2D" uid="uid://bdexqbvdrk28s" path="res://assets/art/character/fighter_Idle_0001.png" id="13_giy8y"]
+[ext_resource type="Texture2D" uid="uid://s2kjbp8mq580" path="res://assets/art/character/fighter_Idle_0002.png" id="14_fdfoy"]
+[ext_resource type="Texture2D" uid="uid://c3loysaxkci20" path="res://assets/art/character/fighter_Idle_0003.png" id="15_hhpqf"]
+[ext_resource type="Texture2D" uid="uid://dn53pqaao0n2o" path="res://assets/art/character/fighter_Idle_0004.png" id="16_g5jhy"]
+[ext_resource type="Texture2D" uid="uid://dh7rn385wxqhf" path="res://assets/art/character/fighter_Idle_0005.png" id="17_holxr"]
+[ext_resource type="Texture2D" uid="uid://cj613rcmcm6ek" path="res://assets/art/character/fighter_Idle_0006.png" id="18_mx1m4"]
+[ext_resource type="Texture2D" uid="uid://dyxuf86g7ordh" path="res://assets/art/character/fighter_Idle_0007.png" id="19_4gjji"]
+[ext_resource type="Texture2D" uid="uid://dlclli0qerx3k" path="res://assets/art/character/fighter_Idle_0008.png" id="20_u2ulf"]
+[ext_resource type="Texture2D" uid="uid://j2r7ryn1kpl0" path="res://assets/art/character/fighter_jump_0045.png" id="23_sc3ue"]
+[ext_resource type="Texture2D" uid="uid://bfn5srmax0mxi" path="res://assets/art/character/fighter_run_0017.png" id="24_lxlsd"]
+[ext_resource type="Texture2D" uid="uid://cfifamwwo4sdu" path="res://assets/art/character/fighter_run_0018.png" id="25_ha2mi"]
+[ext_resource type="Texture2D" uid="uid://cen46g501ifwv" path="res://assets/art/character/fighter_run_0019.png" id="26_apa73"]
+[ext_resource type="Texture2D" uid="uid://cdngmr8lwkbjm" path="res://assets/art/character/fighter_run_0020.png" id="27_74r1k"]
+[ext_resource type="Texture2D" uid="uid://b8160motpl6cd" path="res://assets/art/character/fighter_run_0021.png" id="28_8svfe"]
+[ext_resource type="Texture2D" uid="uid://qrysops1na32" path="res://assets/art/character/fighter_run_0022.png" id="29_2a3c5"]
+[ext_resource type="Texture2D" uid="uid://dp5hptkbxyc04" path="res://assets/art/character/fighter_run_0023.png" id="30_42b1b"]
+[ext_resource type="Texture2D" uid="uid://cvljdjwngkcd" path="res://assets/art/character/fighter_run_0024.png" id="31_h7ic4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7hik5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n7ghd")
+"texture": ExtResource("2_wnwbv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nvl01")
+"texture": ExtResource("3_gl8cc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ivps1")
+"texture": ExtResource("4_487ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_md1ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bj30b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jc3p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hax0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t4otl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j2b1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cs1tg")
 }],
 "loop": true,
 "name": &"die",
@@ -88,7 +69,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q13i1")
+"texture": ExtResource("12_2dvfe")
 }],
 "loop": true,
 "name": &"fall",
@@ -96,52 +77,74 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_urp6f")
+"texture": ExtResource("13_giy8y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bwjto")
+"texture": ExtResource("14_fdfoy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_606se")
+"texture": ExtResource("15_hhpqf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u1c27")
+"texture": ExtResource("16_g5jhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_holxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_mx1m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4gjji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_u2ulf")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 3.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_op7ga")
+"texture": ExtResource("23_sc3ue")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pbfsw")
+"texture": ExtResource("24_lxlsd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5tmop")
+"texture": ExtResource("25_ha2mi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ahtn")
+"texture": ExtResource("26_apa73")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7lmhl")
+"texture": ExtResource("27_74r1k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dx0e4")
+"texture": ExtResource("28_8svfe")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jm5j8")
+"texture": ExtResource("29_2a3c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_42b1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_h7ic4")
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
+radius = 37.0
+height = 158.0
 
 [sub_resource type="Gradient" id="Gradient_sweqy"]
 colors = PackedColorArray(1, 1, 1, 0.196078, 1, 1, 1, 0)
@@ -185,32 +188,36 @@ collision_friction = 0.0
 collision_bounce = 0.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("5_b26j0")
-LiftOffSpeed = null
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8.67)
-shape = SubResource("CapsuleShape2D_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7, -123)
 sprite_frames = SubResource("SpriteFrames_7hik5")
 animation = &"jump"
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -79)
+shape = SubResource("CapsuleShape2D_sweqy")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(-20, 23)
+position = Vector2(-26, -18)
+emitting = false
 amount = 2070
 texture = SubResource("GradientTexture2D_2hs0m")
 speed_scale = 1.65
 process_material = SubResource("ParticleProcessMaterial_sweqy")
 
 [node name="Area2D" type="Area2D" parent="GPUParticles2D"]
+monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="GPUParticles2D/Area2D"]
 position = Vector2(12, -14)
 build_mode = 1
-polygon = PackedVector2Array(-13, 6, -159, 514, 265, 526)
+polygon = PackedVector2Array(-32, -39, -225, 731, 249, 737)
 
 [connection signal="finished" from="GPUParticles2D" to="." method="OnParticlesFinished"]
 [connection signal="area_entered" from="GPUParticles2D/Area2D" to="." method="OnParticleAreaEntered"]
-[connection signal="body_entered" from="GPUParticles2D/Area2D" to="." method="OnParticleBodyEntered"]
+[connection signal="body_entered" from="GPUParticles2D/Area2D" to="." method="OnBodyEntered"]

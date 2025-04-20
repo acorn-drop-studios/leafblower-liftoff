@@ -9,7 +9,7 @@ public partial class GameManager : Node
 
 	public int Score { get; private set; } = 0;
 	public GameState GameState { get; private set; } = GameState.Playing;
-	public double Speed { get; set; } = 300;
+	public double Speed { get; set; } = 400;
 
 	[Signal]
 	public delegate void ScoreChangedEventHandler(int score);
