@@ -31,4 +31,13 @@ public partial class GameManager : Node
 			return Score;
 		}
 	}
+	
+	public void SetGameState(GameState gameState)
+	{
+		lock (@lock)
+		{
+			GameState = gameState;
+			EmitSignal(SignalName.GameStateChanged);
+		}
+	}
 }

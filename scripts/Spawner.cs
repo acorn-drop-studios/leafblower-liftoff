@@ -1,5 +1,6 @@
 using System.Linq;
 using Godot;
+using LeafblowerLiftoff.scripts.enums;
 
 namespace LeafblowerLiftoff.scripts;
 
@@ -18,6 +19,17 @@ public partial class Spawner : Node
         _spawnTimer.WaitTime = _spawnTimerWaitTime;
         _spawnTimer.Timeout += OnSpawnTimerTimeout;
         _spawnTimer.Start();
+        GameManager.Instance.GameStateChanged += () =>
+        {
+            if (GameManager.Instance.GameState == GameState.Playing)
+            {
+                _spawnTimer.Start();
+            }
+            else
+            {
+                _spawnTimer.Stop();
+            }
+        };
     }
 
     private void OnSpawnTimerTimeout()

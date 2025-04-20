@@ -10,11 +10,11 @@ public partial class SpawnManager:Node
 
     private List<Vector2> _spawnLocations =
     [
-        new Vector2(2000, 581),
-        new Vector2(2000, 581),
-        new Vector2(2000, 581),
-        new Vector2(2000, 581),
-        new Vector2(2000, 581)
+        new Vector2(2000, 20),
+        new Vector2(2000, 100),
+        new Vector2(2000, 200),
+        new Vector2(2000, 300),
+        new Vector2(2000, 400)
     ];
     
     public override void _Ready()

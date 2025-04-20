@@ -21,6 +21,7 @@ public partial class World : ParallaxBackground
 
 	public override void _Process(double delta)
 	{
+		if (!_scrolling) return;
 		ScrollOffset = ScrollOffset with { X = ScrollOffset.X - (float)(GameManager.Instance.Speed * delta) };
 	}
 }

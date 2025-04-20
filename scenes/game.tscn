@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfgf57q6kbne3"]
+[gd_scene load_steps=8 format=3 uid="uid://bfgf57q6kbne3"]
 
 [ext_resource type="Script" uid="uid://crc5utk6ppw7j" path="res://scripts/Game.cs" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dbwkw0mkq3344" path="res://scenes/player.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://ckpc0i4sv0w4p" path="res://scenes/world.tscn" id="3_iywne"]
 [ext_resource type="Script" uid="uid://rxav6evl6d0b" path="res://scripts/LeafSpawner.cs" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://pyrfmvi57dne" path="res://scenes/leaf.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://ckc2u4hhtkmce" path="res://scripts/BirdSpawner.cs" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://b6ye8tyoc5lup" path="res://scenes/bird.tscn" id="7_u5sy4"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
@@ -22,3 +24,8 @@ scale = Vector2(0.595, 0.595)
 
 [node name="Leaf" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(269, 189)
+
+[node name="BirdSpawner" type="Node" parent="." node_paths=PackedStringArray("TargetNode")]
+script = ExtResource("6_p57ef")
+NodeScene = ExtResource("7_u5sy4")
+TargetNode = NodePath("../Player")

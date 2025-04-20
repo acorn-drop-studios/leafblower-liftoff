@@ -15,6 +15,4 @@ public partial class Leaf : Spawnable
 		GD.Print("Spawned leaf");
 		SpawnManager.Instance.ReturnSpawnLocation(spawnLocation);
 	}
-
-	
 }

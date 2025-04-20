@@ -56,7 +56,16 @@ public partial class Player : CharacterBody2D
 
     public void OnParticleAreaEntered(Area2D area)
     {
-        area.QueueFree();
+        if (area.GetParent() is Leaf)
+        {
+            GD.Print("Hit leaf");
+            area.QueueFree();
+        }
+
+        if (area.GetParent() is Bird)
+        {
+            GD.Print("Hit bird");
+        }
         GD.Print("Particle area entered");
     }
 
