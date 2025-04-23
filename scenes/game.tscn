@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfgf57q6kbne3"]
+[gd_scene load_steps=15 format=3 uid="uid://bfgf57q6kbne3"]
 
 [ext_resource type="Script" uid="uid://crc5utk6ppw7j" path="res://scripts/Game.cs" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dbwkw0mkq3344" path="res://scenes/player.tscn" id="2_lbhrr"]
@@ -7,25 +7,49 @@
 [ext_resource type="PackedScene" uid="uid://pyrfmvi57dne" path="res://scenes/leaf.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://ckc2u4hhtkmce" path="res://scripts/BirdSpawner.cs" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b6ye8tyoc5lup" path="res://scenes/bird.tscn" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://b1if8qtqwwid8" path="res://scripts/BalloonSpawner.cs" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://c74gptut8dkwg" path="res://scenes/balloon.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://6vn2rxq8vr2d" path="res://scenes/hud.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://c3y57rfet0b3" path="res://scenes/start_screen.tscn" id="11_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cpbdwdm0qwtuj" path="res://scenes/game_over_screen.tscn" id="12_kvuet"]
+[ext_resource type="Script" uid="uid://brd46kjndn6d7" path="res://scripts/gui/StartScreen.cs" id="12_trtic"]
+[ext_resource type="Script" uid="uid://djcf5sxrwqu28" path="res://scripts/gui/GameOverScreen.cs" id="14_ir15t"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lnu2h")
 
 [node name="World" parent="." instance=ExtResource("3_iywne")]
 
-[node name="LeafSpawner" type="Node" parent="."]
-script = ExtResource("4_lbhrr")
-NodeScene = ExtResource("5_iywne")
-
 [node name="Player" parent="." instance=ExtResource("2_lbhrr")]
 z_index = 5
 position = Vector2(116, 579)
 scale = Vector2(0.595, 0.595)
 
-[node name="Leaf" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(269, 189)
+[node name="Spawners" type="Node" parent="."]
 
-[node name="BirdSpawner" type="Node" parent="." node_paths=PackedStringArray("TargetNode")]
+[node name="LeafSpawner" type="Node" parent="Spawners"]
+script = ExtResource("4_lbhrr")
+NodeScene = ExtResource("5_iywne")
+SpawnTimerMin = 0.25
+
+[node name="BirdSpawner" type="Node" parent="Spawners" node_paths=PackedStringArray("TargetNode")]
 script = ExtResource("6_p57ef")
 NodeScene = ExtResource("7_u5sy4")
-TargetNode = NodePath("../Player")
+TargetNode = NodePath("../../Player")
+SpawnTimerMin = 5.0
+SpawnTimerMax = 12.0
+
+[node name="BalloonSpawner" type="Node" parent="Spawners"]
+script = ExtResource("8_gee14")
+NodeScene = ExtResource("9_0tnpc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("10_vtaks")]
+
+[node name="StartScreen" parent="CanvasLayer" instance=ExtResource("11_dinhu")]
+script = ExtResource("12_trtic")
+
+[node name="GameOverScreen" parent="CanvasLayer" instance=ExtResource("12_kvuet")]
+visible = false
+script = ExtResource("14_ir15t")

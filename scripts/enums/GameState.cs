@@ -5,4 +5,5 @@ public enum GameState
     GameOver,
     Menu,
     Playing,
+    NewGame
 }

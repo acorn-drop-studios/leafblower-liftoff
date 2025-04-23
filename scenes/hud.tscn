@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://6vn2rxq8vr2d"]
+
+[ext_resource type="Script" uid="uid://bg1fppfnrwwi6" path="res://scripts/gui/Hud.cs" id="1_ahhtf"]
+
+[sub_resource type="Theme" id="Theme_toqtt"]
+default_font_size = 23
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_toqtt")
+script = ExtResource("1_ahhtf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Distance" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "000m"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HighScore" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "Best: 000"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Score" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "000"

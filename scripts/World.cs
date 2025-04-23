@@ -1,10 +1,11 @@
 using Godot;
-using System;
 using LeafblowerLiftoff.scripts.enums;
+
+namespace LeafblowerLiftoff.scripts;
 
 public partial class World : ParallaxBackground
 {
-	private bool _scrolling = true;
+	private bool _scrolling;
 
 	public override void _Ready()
 	{
@@ -22,6 +23,6 @@ public partial class World : ParallaxBackground
 	public override void _Process(double delta)
 	{
 		if (!_scrolling) return;
-		ScrollOffset = ScrollOffset with { X = ScrollOffset.X - (float)(GameManager.Instance.Speed * delta) };
+		ScrollOffset = ScrollOffset with { X = ScrollOffset.X - (float)(GameManager.Instance.CurrentSpeed * delta) };
 	}
 }

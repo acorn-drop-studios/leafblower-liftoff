@@ -1,18 +1,28 @@
 using Godot;
-using System;
-using LeafblowerLiftoff.scripts;
+
+namespace LeafblowerLiftoff.scripts.entities;
 
 [GlobalClass]
 public partial class Leaf : Spawnable
 {
-	public override void _Ready()
-	{
-	}
-
 	public override void Spawn(Vector2 spawnLocation, Vector2? target)
 	{
-		this.Position = new Vector2(2000, 581);
-		GD.Print("Spawned leaf");
-		SpawnManager.Instance.ReturnSpawnLocation(spawnLocation);
+		Position = new Vector2(2000, 581);
 	}
+
+	public override void _PhysicsProcess(double delta)
+	{
+		
+	}
+
+	public override void _Process(double delta)
+	{
+		
+	}
+
+	public void ScreenExited()
+	{
+		QueueFree();
+	}
+	
 }

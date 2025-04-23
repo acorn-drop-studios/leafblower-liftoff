@@ -3,9 +3,11 @@ using LeafblowerLiftoff.scripts.enums;
 
 namespace LeafblowerLiftoff.scripts.entities;
 
-public partial class BaseEntity: Node2D
+public partial class BaseEntity : Node2D
 {
-    private bool _isScrolling = true;
+    [Export] public float Speed { get; set; } = 0;
+
+    private bool _isScrolling = false;
 
     public override void _Ready()
     {
@@ -20,7 +22,7 @@ public partial class BaseEntity: Node2D
     {
         if (_isScrolling)
         {
-            Position = Position with { X = (float)(Position.X - GameManager.Instance.Speed * delta) };
+            Position = Position with { X = (float)(Position.X - (GameManager.Instance.CurrentSpeed + Speed) * delta) };
         }
     }
 }

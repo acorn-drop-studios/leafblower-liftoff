@@ -3,14 +3,13 @@ using LeafblowerLiftoff.scripts.enums;
 
 namespace LeafblowerLiftoff.scripts.entities;
 
-[GlobalClass]
-public partial class Bird : Spawnable
+public partial class Balloon : Spawnable
 {
 	public void OnBodyEntered(Node body)
 	{
 		if (body is Player player)
 		{
-			GD.Print("Bird collided with player");
+			GD.Print("Balloon collided with player");
 			GameManager.Instance.SetGameState(GameState.GameOver);
 		}
 	}

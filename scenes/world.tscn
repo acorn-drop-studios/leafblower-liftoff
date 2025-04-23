@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://ckpc0i4sv0w4p"]
+[gd_scene load_steps=11 format=4 uid="uid://ckpc0i4sv0w4p"]
 
 [ext_resource type="Script" uid="uid://cakh6bv0qwkyw" path="res://scripts/World.cs" id="1_4wyf3"]
 [ext_resource type="Texture2D" uid="uid://crl8jch3subqg" path="res://assets/art/background/background1.png" id="2_i7141"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qfnet"]
 normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4wyf3"]
+distance = -13.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dss4m"]
 texture = ExtResource("5_w7kh3")
@@ -156,7 +159,7 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSet" id="TileSet_tlwt5"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_mask = 15
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
@@ -786,13 +789,20 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Ceiling"]
 shape = SubResource("WorldBoundaryShape2D_qfnet")
 
+[node name="Floor" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(0, 559.25)
+collision_mask = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/Floor"]
+shape = SubResource("WorldBoundaryShape2D_4wyf3")
+
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1000, 0)
+motion_mirroring = Vector2(1152, 0)
 
 [node name="Ground" type="TileMapLayer" parent="ParallaxLayer"]
 z_index = 1
 position = Vector2(505, 591)
-tile_map_data = PackedByteArray("AAD4////BAAAAAAAAAD4/wAABAAAAAEAAAD5////BAABAAAAAAD5/wAABAABAAEAAAD6/wAABAACAAEAAAD7////BAADAAAAAAD7/wAABAADAAEAAAD8////BAAEAAAAAAD8/wAABAAEAAEAAAD9////BAAFAAAAAAD9/wAABAAFAAEAAAD+////BAAGAAAAAAD+/wAABAAGAAEAAAD/////BAAHAAAAAAD//wAABAAHAAEAAAAAAP//BAAIAAAAAAAAAAAABAAIAAEAAAABAP//BAAJAAAAAAABAAAABAAJAAEAAAACAP//BAAAAAAAAAACAAAABAAAAAEAAAADAP//BAABAAAAAAADAAAABAABAAEAAAAEAP//BAACAAAAAAAEAAAABAACAAEAAAAFAP//BAADAAAAAAAFAAAABAADAAEAAAAGAP//BAAEAAAAAAAGAAAABAAEAAEAAAAHAP//BAAFAAAAAAAHAAAABAAFAAEAAAAIAP//BAAGAAAAAAAIAAAABAAGAAEAAAAJAP//BAAHAAAAAAAJAAAABAAHAAEAAAAKAP//BAAIAAAAAAAKAAAABAAIAAEAAAD6////BAACAAAAAAA=")
+tile_map_data = PackedByteArray("AAD4////BAAAAAAAAAD4/wAABAAAAAEAAAD5////BAABAAAAAAD5/wAABAABAAEAAAD6////BAACAAAAAAD6/wAABAACAAEAAAD7////BAADAAAAAAD7/wAABAADAAEAAAD8////BAAEAAAAAAD8/wAABAAEAAEAAAD9////BAAFAAAAAAD9/wAABAAFAAEAAAD+////BAAGAAAAAAD+/wAABAAGAAEAAAD/////BAAHAAAAAAD//wAABAAHAAEAAAAAAP//BAAIAAAAAAAAAAAABAAIAAEAAAABAP//BAAJAAAAAAABAAAABAAJAAEAAAACAP//BAAAAAAAAAACAAAABAAAAAEAAAADAP//BAABAAAAAAADAAAABAABAAEAAAAEAP//BAACAAAAAAAEAAAABAACAAEAAAAFAP//BAADAAAAAAAFAAAABAADAAEAAAAGAP//BAAEAAAAAAAGAAAABAAEAAEAAAAHAP//BAAFAAAAAAAHAAAABAAFAAEAAAAIAP//BAAGAAAAAAAIAAAABAAGAAEAAAAJAP//BAAHAAAAAAAJAAAABAAHAAEAAAA=")
 tile_set = SubResource("TileSet_tlwt5")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
