@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3y57rfet0b3"]
+[gd_scene load_steps=2 format=3 uid="uid://iqlep4ohhb11"]
 
 [sub_resource type="Theme" id="Theme_cllq7"]
 default_font_size = 32
@@ -25,4 +25,4 @@ offset_right = 89.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Press Any Key To Begin"
+text = "Press Enter Key To Begin"
