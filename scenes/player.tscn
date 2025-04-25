@@ -194,16 +194,14 @@ script = ExtResource("5_b26j0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-7, -123)
 sprite_frames = SubResource("SpriteFrames_7hik5")
-animation = &"run"
-frame = 7
-frame_progress = 0.826612
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -79)
 shape = SubResource("CapsuleShape2D_sweqy")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(-26, -18)
+position = Vector2(-47, -9)
 emitting = false
 amount = 2070
 texture = SubResource("GradientTexture2D_2hs0m")
@@ -216,7 +214,7 @@ collision_mask = 13
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="GPUParticles2D/Area2D"]
-position = Vector2(12, -14)
+position = Vector2(30, 29)
 build_mode = 1
 polygon = PackedVector2Array(-32, -39, -225, 731, 249, 737)
 
