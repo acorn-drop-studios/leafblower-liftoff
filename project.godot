@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="LeafblowerLiftoff"
-run/main_scene="uid://p1c6bgp4xmhv"
+run/main_scene="uid://bfgf57q6kbne3"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*res://scripts/GameManager.cs"
+SpawnManager="*res://scripts/SpawnManager.cs"
 SaveLoad="*res://scripts/SaveLoad.cs"
 
 [dotnet]

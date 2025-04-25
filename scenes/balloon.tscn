@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c74gptut8dkwg"]
+[gd_scene load_steps=4 format=3 uid="uid://c6jy6xfy6a6wi"]
 
 [ext_resource type="Script" uid="uid://41cg14k0e63e" path="res://scripts/entities/Balloon.cs" id="1_tpd1t"]
 [ext_resource type="Texture2D" uid="uid://bnopd62sofw3o" path="res://assets/art/balloon.png" id="2_1eawp"]

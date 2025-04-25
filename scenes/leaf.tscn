@@ -1,46 +1,45 @@
 [gd_scene load_steps=7 format=3 uid="uid://pyrfmvi57dne"]
 
 [ext_resource type="Script" uid="uid://dnhtmgxap6tnh" path="res://scripts/entities/Leaf.cs" id="1_4r3pj"]
-[ext_resource type="Texture2D" uid="uid://cnmf5ns3w2flb" path="res://assets/art/hit_effect_0001.png" id="2_4r3pj"]
 [ext_resource type="Script" uid="uid://dtdrxro40r37j" path="res://scripts/entities/LeafBody.cs" id="2_r6846"]
+[ext_resource type="Texture2D" uid="uid://ct34127qgqerk" path="res://assets/art/leaf.png" id="3_r6846"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4r3pj"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r6846"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4r3pj"]
 radius = 24.0
 height = 48.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4r3pj"]
-polygon = PackedVector2Array(-24, -33, 14, -44, 10, -4)
+polygon = PackedVector2Array(-24, -33, 18, -41, 7, -12)
 
 [node name="Leaf" type="Node2D"]
 script = ExtResource("1_4r3pj")
-metadata/_custom_type_script = "uid://bo5gvn5058lp4"
 
 [node name="StaticBody2D" type="RigidBody2D" parent="."]
 z_index = 4
+position = Vector2(0, 16)
 collision_layer = 8
 collision_mask = 5
-physics_material_override = SubResource("PhysicsMaterial_4r3pj")
-can_sleep = false
-linear_velocity = Vector2(1000, -500)
-angular_velocity = 8.72665
-constant_force = Vector2(0, -10000)
+physics_material_override = SubResource("PhysicsMaterial_r6846")
 script = ExtResource("2_r6846")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 texture_filter = 1
 position = Vector2(0, -26)
+rotation = 0.598648
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_4r3pj")
+texture = ExtResource("3_r6846")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, -23)
 shape = SubResource("CapsuleShape2D_4r3pj")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="StaticBody2D"]
+position = Vector2(0, -23)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D"]
+position = Vector2(1, 2)
 occluder = SubResource("OccluderPolygon2D_4r3pj")
 
 [connection signal="body_entered" from="StaticBody2D" to="." method="OnBodyEntered"]

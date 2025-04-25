@@ -7,7 +7,7 @@ public partial class BaseEntity : Node2D
 {
     [Export] public float Speed { get; set; } = 0;
 
-    private bool _isScrolling = false;
+    protected bool _isScrolling;
 
     public override void _Ready()
     {
